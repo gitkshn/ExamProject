@@ -1,31 +1,51 @@
+import Exceptions.ContainsMoreThan3PlanetsException;
 import Exceptions.ContainsNoSpaceshipsException;
-import Exceptions.HasOver6NeighboringSystemsException;
 import Units.Units;
 
 import java.util.ArrayList;
 
 /* Kasper Suamchiang Hvitfeldt Nielsen.
 kshn16@student.aau.dk */
-public class PlanetSystem {
+public class PlanetSystem implements Systems{
     private String position;
     private ArrayList<Planet> planetList;
-    public ArrayList<Units> spaceshipsInsidePlanetSystem = new ArrayList<Units>();
+    private ArrayList<Units> spaceshipsInsidePlanetSystem = new ArrayList<Units>();
 
-    public PlanetSystem(String position, ArrayList<Planet> planetList) throws HasOver6NeighboringSystemsException {
+    public PlanetSystem(String position, ArrayList<Planet> planetList) throws ContainsMoreThan3PlanetsException {
         this.position = position;
-        if (planetList.size() <= 6) {
+        if (planetList.size() <= 3) {
             this.planetList = planetList;
         }
         else {
-            throw new HasOver6NeighboringSystemsException();
+            throw new ContainsMoreThan3PlanetsException();
         }
     }
+
+    @Override
     //adds a spaceship to the spaceships arrayList.
-    public void flySpaceshipToPlanetSystem(Units spaceship) {
+    public void flySpaceshipToSystem(Units spaceship) {
         spaceshipsInsidePlanetSystem.add(spaceship);
     }
+
+    @Override
+    //returns an arrayList of the spaceships ín the system.
+    public ArrayList<Units> getSpaceshipsInsideSystem() {
+        return spaceshipsInsidePlanetSystem;
+    }
+
+    @Override
+    //returns an arrayList of the planets present in the system.
+    public ArrayList<Planet> getPlanetList() {
+        return planetList;
+    }
+
+    @Override
+    public String getPosition() {
+        return position;
+    }
+
     //remove a spaceship in the spaceships arrayList if it is present.
-    public void flySpaceshipAwayFromPlanetSystem(Units spaceship) {
+    public void flySpaceshipAwayFromSystem(Units spaceship) {
         spaceshipsInsidePlanetSystem.remove(spaceship);
     }
     //prints all the ships that resides in the current planet system.
@@ -40,12 +60,9 @@ public class PlanetSystem {
             }
         }
     }
-    //returns the position of the planet.
-    public String getPosition() {
-        return position;
-    }
-    //returns an arrayList of the planets present in the system.
-    public ArrayList<Planet> getPlanetList() {
-        return planetList;
-    }
+
+
+
+
+
 }

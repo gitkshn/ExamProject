@@ -17,14 +17,14 @@ class PlanetSystemTest {
 
 
     @Test
-    void flySpaceshipToPlanetSystem() {
+    void flySpaceshipToSystem() {
         try {
             ArrayList<Planet> planetArrayList = new ArrayList<>();
             planetArrayList.add(new Planet(PlanetNames.ARNOR.name(), 5));
             PlanetSystem planetSystem = new PlanetSystem("North", planetArrayList);
 
-            planetSystem.flySpaceshipToPlanetSystem(lightCruiser);
-            assertTrue(planetSystem.spaceshipsInsidePlanetSystem.contains(lightCruiser));
+            planetSystem.flySpaceshipToSystem(lightCruiser);
+            assertTrue(planetSystem.getSpaceshipsInsideSystem().contains(lightCruiser));
 
         } catch (Exception e) {
             System.out.println(e.getMessage());
@@ -34,17 +34,17 @@ class PlanetSystemTest {
     }
 
     @Test
-    void flySpaceshipAwayFromPlanetSystem() {
+    void flySpaceshipAwayFromSystem() {
         try {
             ArrayList<Planet> planetArrayList = new ArrayList<>();
             planetArrayList.add(new Planet(PlanetNames.CENTAURI.name(), 5));
             PlanetSystem planetSystem = new PlanetSystem("Center", planetArrayList);
-            planetSystem.flySpaceshipToPlanetSystem(lightCruiser);
-            assertTrue(planetSystem.spaceshipsInsidePlanetSystem.contains(lightCruiser));
+            planetSystem.flySpaceshipToSystem(lightCruiser);
+            assertTrue(planetSystem.getSpaceshipsInsideSystem().contains(lightCruiser));
 
             //removes the recently added light cruiser and the planet system should now be empty of spaceships.
-            planetSystem.flySpaceshipAwayFromPlanetSystem(lightCruiser);
-            assertTrue(planetSystem.spaceshipsInsidePlanetSystem.isEmpty());
+            planetSystem.flySpaceshipAwayFromSystem(lightCruiser);
+            assertTrue(planetSystem.getSpaceshipsInsideSystem().isEmpty());
         } catch (Exception e) {
             assert false;
         }
@@ -56,8 +56,8 @@ class PlanetSystemTest {
             ArrayList<Planet> planetArrayList = new ArrayList<>();
             planetArrayList.add(new Planet(PlanetNames.ARCTURUS.name(), 6));
             PlanetSystem planetSystem = new PlanetSystem("East", planetArrayList);
-            planetSystem.flySpaceshipToPlanetSystem(lightCruiser);
-            planetSystem.flySpaceshipToPlanetSystem(destroyer);
+            planetSystem.flySpaceshipToSystem(lightCruiser);
+            planetSystem.flySpaceshipToSystem(destroyer);
 
             //should print the 2 ships that resides in the planet system.
             planetSystem.retrieveAllSpaceships();

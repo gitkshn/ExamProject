@@ -1,4 +1,5 @@
-package Units;/* Kasper Suamchiang Hvitfeldt Nielsen
+package Units;
+/* Kasper Suamchiang Hvitfeldt Nielsen
 kshn16@student.aau.dk */
 import java.util.Objects;
 
