@@ -25,7 +25,7 @@ public class AsteroidFieldSystem implements Systems {
 
     @Override
     public ArrayList<Planet> getPlanetList() {
-        System.out.println("Only asteroids reside here. Enter at your own risk.");
+        System.out.println("Only asteroids resides here. Enter at your own risk.");
         return null;
     }
 
@@ -34,8 +34,7 @@ public class AsteroidFieldSystem implements Systems {
         return position;
     }
 
-
-    public void flySpaceshipAwaySystem(Units dreadnought) {
+    public void flySpaceshipAwayFromSystem(Units dreadnought) {
         spaceshipsInsideSupernova.remove(dreadnought);
     }
 }

@@ -16,7 +16,8 @@ class SupernovaSystemTest {
     void flySpaceshipToSystem() {
         try {
             supernovaSystem.flySpaceshipToSystem(dreadnought);
-            assert true;
+            assertTrue(supernovaSystem.getSpaceshipsInsideSystem().isEmpty());
+
         } catch (Exception e) {
             e.printStackTrace();
             assert false;
