@@ -1,4 +1,4 @@
-/* Kasper Suamchiang Hvitfeldt Nielsen
+package Units;/* Kasper Suamchiang Hvitfeldt Nielsen
 kshn16@student.aau.dk */
 import java.util.Objects;
 
@@ -41,7 +41,7 @@ public class Player {
 
     @Override
     public String toString() {
-        return "Player: " +
+        return "Player - " +
                 "name: " + name +
                 ", race: " + race +
                 ", color: " + color;
