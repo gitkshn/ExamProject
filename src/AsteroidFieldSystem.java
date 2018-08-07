@@ -28,6 +28,7 @@ public class AsteroidFieldSystem implements Systems {
     }
 
     @Override
+    //returns an empty list
     public ArrayList<Planet> getPlanetList() {
         System.out.println("Only asteroids resides in the " + getPosition() + " system. Enter at your own risk.");
         return new ArrayList<>();

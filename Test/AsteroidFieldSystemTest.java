@@ -27,9 +27,9 @@ class AsteroidFieldSystemTest {
 
 
     @Test
-    //the planet list should return null as specified in the method.
+    //the planet list should return an empty list as specified in the method.
     void getPlanetList() {
-        assertNull(asteroidFieldSystem.getPlanetList());
+        assertTrue(asteroidFieldSystem.getPlanetList().isEmpty());
     }
 
     @Test
