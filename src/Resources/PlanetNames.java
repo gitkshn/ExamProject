@@ -22,4 +22,9 @@ public enum PlanetNames {
     ARCTURUS,
     BELLATRIX,
     MECATOL_REX,
+    VEGA_MINOR,
+    VEGA_MAJOR,
+    INDUSTREX,
+    RIGEL_I,
+    RIGEL_II,
 }

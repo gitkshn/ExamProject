@@ -3,6 +3,7 @@ import Exceptions.ContainsNoSpaceshipsException;
 import Units.Units;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 /* Kasper Suamchiang Hvitfeldt Nielsen.
 kshn16@student.aau.dk */
@@ -11,10 +12,23 @@ public class PlanetSystem implements Systems{
     private ArrayList<Planet> planetList;
     private ArrayList<Units> spaceshipsInsidePlanetSystem = new ArrayList<Units>();
 
+    //constructor with position and arrayList for initializing without planets.
     public PlanetSystem(String position, ArrayList<Planet> planetList) throws ContainsMoreThan3PlanetsException {
         this.position = position;
         if (planetList.size() <= 3) {
             this.planetList = planetList;
+        }
+        else {
+            throw new ContainsMoreThan3PlanetsException();
+        }
+    }
+    //constructor with position and arrayList for initializing with planets via var args.
+    public PlanetSystem(String position, ArrayList<Planet> planetList, Planet ... planets) throws ContainsMoreThan3PlanetsException {
+        this.position = position;
+        if (planetList.size() <= 3 && planets.length <= 3) {
+            this.planetList = planetList;
+            //var args parses an array and Array.asList converts it to a list.
+            this.planetList.addAll(Arrays.asList(planets));
         }
         else {
             throw new ContainsMoreThan3PlanetsException();
