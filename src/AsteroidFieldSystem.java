@@ -8,6 +8,10 @@ public class AsteroidFieldSystem implements Systems {
     private String position;
     private ArrayList<Units> spaceshipsInsideSupernova = new ArrayList<Units>();
 
+    public AsteroidFieldSystem(String position) {
+        this.position = position;
+    }
+
     @Override
     //adds the spaceship to the arrayList. If it is not a dreadnought the object gets removed.
     public void flySpaceshipToSystem(Units spaceship) {
@@ -25,8 +29,8 @@ public class AsteroidFieldSystem implements Systems {
 
     @Override
     public ArrayList<Planet> getPlanetList() {
-        System.out.println("Only asteroids resides here. Enter at your own risk.");
-        return null;
+        System.out.println("Only asteroids resides in the " + getPosition() + " system. Enter at your own risk.");
+        return new ArrayList<>();
     }
 
     @Override

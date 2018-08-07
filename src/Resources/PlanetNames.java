@@ -27,4 +27,5 @@ public enum PlanetNames {
     INDUSTREX,
     RIGEL_I,
     RIGEL_II,
+    MIRAGE,
 }

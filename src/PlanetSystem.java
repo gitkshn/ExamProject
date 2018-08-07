@@ -13,7 +13,7 @@ public class PlanetSystem implements Systems{
     private ArrayList<Units> spaceshipsInsidePlanetSystem = new ArrayList<Units>();
 
     //constructor with position and arrayList for initializing without planets.
-    public PlanetSystem(String position, ArrayList<Planet> planetList) throws ContainsMoreThan3PlanetsException {
+    PlanetSystem(String position, ArrayList<Planet> planetList) throws ContainsMoreThan3PlanetsException {
         this.position = position;
         if (planetList.size() <= 3) {
             this.planetList = planetList;
@@ -22,13 +22,13 @@ public class PlanetSystem implements Systems{
             throw new ContainsMoreThan3PlanetsException();
         }
     }
-    //constructor with position and arrayList for initializing with planets via var args.
-    public PlanetSystem(String position, ArrayList<Planet> planetList, Planet ... planets) throws ContainsMoreThan3PlanetsException {
+    //constructor with position and arrayList for initializing with planets via varargs.
+    PlanetSystem(String position, ArrayList<Planet> planetList, Planet... planets) throws ContainsMoreThan3PlanetsException {
         this.position = position;
         if (planetList.size() <= 3 && planets.length <= 3) {
-            this.planetList = planetList;
             //var args parses an array and Array.asList converts it to a list.
-            this.planetList.addAll(Arrays.asList(planets));
+            planetList.addAll(Arrays.asList(planets));
+            this.planetList = planetList;
         }
         else {
             throw new ContainsMoreThan3PlanetsException();
@@ -39,6 +39,10 @@ public class PlanetSystem implements Systems{
     //adds a spaceship to the spaceships arrayList.
     public void flySpaceshipToSystem(Units spaceship) {
         spaceshipsInsidePlanetSystem.add(spaceship);
+    }
+    //adds multiple ships via varargs. the method is overloaded.
+    void flySpaceshipToSystem(Units ... spaceship) {
+        spaceshipsInsidePlanetSystem.addAll(Arrays.asList(spaceship));
     }
 
     @Override
@@ -59,11 +63,11 @@ public class PlanetSystem implements Systems{
     }
 
     //remove a spaceship in the spaceships arrayList if it is present.
-    public void flySpaceshipAwayFromSystem(Units spaceship) {
+    void flySpaceshipAwayFromSystem(Units spaceship) {
         spaceshipsInsidePlanetSystem.remove(spaceship);
     }
     //prints all the ships that resides in the current planet system.
-    public void retrieveAllSpaceships() throws ContainsNoSpaceshipsException {
+    void retrieveAllSpaceships() throws ContainsNoSpaceshipsException {
         if (spaceshipsInsidePlanetSystem.isEmpty()) {
             throw new ContainsNoSpaceshipsException();
         }

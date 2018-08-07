@@ -8,6 +8,10 @@ public class SupernovaSystem implements Systems {
     private String position;
     private ArrayList<Units> spaceshipsInsideSupernova = new ArrayList<Units>();
 
+    public SupernovaSystem(String position) {
+        this.position = position;
+    }
+
     @Override
     //adds the spaceship to the arrayList and immediately removes it via the clear method.
     public void flySpaceshipToSystem(Units spaceship) {
@@ -23,8 +27,8 @@ public class SupernovaSystem implements Systems {
 
     @Override
     public ArrayList<Planet> getPlanetList() {
-        System.out.println("All the stars have collapsed and turned into supernovas.");
-        return null;
+        System.out.println("All the stars have collapsed and turned into supernovas in the " + getPosition() + " system.");
+        return new ArrayList<>();
     }
 
     @Override

@@ -10,7 +10,7 @@ kshn16@student.aau.dk */
 class SupernovaSystemTest {
     Dreadnought dreadnought = new Dreadnought(new Player("Danny", Races.BROTHERHOOD_OF_YIN.name(), "White"));
 
-    SupernovaSystem supernovaSystem = new SupernovaSystem();
+    SupernovaSystem supernovaSystem = new SupernovaSystem("North");
 
     @Test
     void flySpaceshipToSystem() {

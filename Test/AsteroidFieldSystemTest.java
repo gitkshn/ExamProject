@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
 /* Kasper Suamchiang Hvitfeldt Nielsen.
 kshn16@student.aau.dk */
 class AsteroidFieldSystemTest {
-    private AsteroidFieldSystem asteroidFieldSystem = new AsteroidFieldSystem();
+    private AsteroidFieldSystem asteroidFieldSystem = new AsteroidFieldSystem("North");
     private Player cercei = new Player("Cersei", Races.FEDERATION_OF_SOL.name(), "Yellow");
     private Carrier carrier = new Carrier(cercei);
     private Dreadnought dreadnought = new Dreadnought(cercei);

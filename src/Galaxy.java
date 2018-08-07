@@ -1,13 +1,19 @@
 import Units.Units;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 /* Kasper Suamchiang Hvitfeldt Nielsen.
 kshn16@student.aau.dk */
-public class Galaxy {
+class Galaxy {
     ArrayList<Systems> SystemsList;
 
-    public Galaxy(ArrayList<Systems> SystemsList) {
+    Galaxy(ArrayList<Systems> SystemsList) {
+        this.SystemsList = SystemsList;
+    }
+
+    Galaxy(ArrayList<Systems> SystemsList, Systems ... systems) {
+        SystemsList.addAll(Arrays.asList(systems));
         this.SystemsList = SystemsList;
     }
 
@@ -29,10 +35,10 @@ public class Galaxy {
     }
 
     public void findAllPlanets() {
-        System.out.println("These planets resides in this Galaxy: ");
+        System.out.println("   These planets resides in this Galaxy: ");
         for (Systems systems : SystemsList) {
             for (Planet planet : systems.getPlanetList()) {
-                System.out.println(planet.getName() + " exists in " + systems.getPosition());
+                System.out.println(planet.getName() + " exists in the " + systems.getPosition() + " system.");
             }
         }
     }
