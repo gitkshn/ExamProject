@@ -8,7 +8,7 @@ import java.util.ArrayList;
 kshn16@student.aau.dk */
 public class AsteroidFieldSystem implements Systems {
     private String position;
-    private ArrayList<Units> spaceshipsInsideSupernova = new ArrayList<Units>();
+    private ArrayList<Units> spaceshipsInsideAsteroidField = new ArrayList<Units>();
 
     AsteroidFieldSystem(String position) {
         this.position = position;
@@ -17,16 +17,16 @@ public class AsteroidFieldSystem implements Systems {
     @Override
     //adds the spaceship to the arrayList. If it is not a dreadnought the object gets removed.
     public void flySpaceshipToSystem(Units spaceship) {
-        spaceshipsInsideSupernova.add(spaceship);
+        spaceshipsInsideAsteroidField.add(spaceship);
         if (!spaceship.getClass().getSimpleName().contentEquals("Dreadnought")) {
             System.out.println(spaceship.getClass().getSimpleName() + " was hit by an asteroid and destroyed.");
-            spaceshipsInsideSupernova.remove(spaceship);
+            spaceshipsInsideAsteroidField.remove(spaceship);
         }
     }
 
     @Override
     public ArrayList<Units> getSpaceshipsInsideSystem() {
-        return spaceshipsInsideSupernova;
+        return spaceshipsInsideAsteroidField;
     }
 
     @Override
@@ -42,11 +42,16 @@ public class AsteroidFieldSystem implements Systems {
     }
 
     @Override
+    //throws an exception with string parameter asteroidField.
     public Player spaceBattle(Player redPlayer, Player bluePlayer) throws InvalidSpaceBattleException {
         throw new  InvalidSpaceBattleException("asteroidField");
     }
-
-    void flySpaceshipAwayFromSystem(Units dreadnought) {
-        spaceshipsInsideSupernova.remove(dreadnought);
+    //removes the spaceship if the player has dreadnought present in the asteroid field.
+    void flySpaceshipAwayFromSystem(Player player) {
+        for (Units spaceship : spaceshipsInsideAsteroidField) {
+            if (spaceship.getOwner().equals(player)) {
+                spaceshipsInsideAsteroidField.remove(spaceship);
+            }
+        }
     }
 }

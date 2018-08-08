@@ -10,7 +10,7 @@ import java.util.*;
 
 /* Kasper Suamchiang Hvitfeldt Nielsen.
 kshn16@student.aau.dk */
-public class Galaxy {
+class Galaxy {
     ArrayList<Systems> SystemsList;
 
     Galaxy(ArrayList<Systems> SystemsList) {
@@ -81,7 +81,7 @@ public class Galaxy {
 
     boolean doesNotContainDuplicatePlanets() throws GalaxyHasDuplicatePlanets {
         ArrayList<Planet> totalPlanetList = new ArrayList<>();
-
+        //gathers all the planets into a single arrayList.
         for (Systems systems : SystemsList) {
             totalPlanetList.addAll(systems.getPlanetList());
 
@@ -100,7 +100,7 @@ public class Galaxy {
     }
 
     boolean doesNotHaveMoreThan3PlanetsInASystem() throws SystemHasMoreThan3PlanetsException {
-
+        //checks if the size is greater than 3 and throws an exception if it is.
         for (Systems systems : SystemsList) {
             if (3 < systems.getPlanetList().size()) {
                 throw new SystemHasMoreThan3PlanetsException();
@@ -165,6 +165,7 @@ public class Galaxy {
 
         return spaceshipsOwnedByPlayer;
     }
+
     void createTextFileContainingPlayersWithPlanetaryControl() {
     /*bufferedWriter in try-with-resources to close it after use.
     the filepath for PlayersWithPlanetaryControl is in the same folder as the project.*/

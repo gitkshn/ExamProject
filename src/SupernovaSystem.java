@@ -10,7 +10,7 @@ public class SupernovaSystem implements Systems {
     private String position;
     private ArrayList<Units> spaceshipsInsideSupernova = new ArrayList<Units>();
 
-    public SupernovaSystem(String position) {
+    SupernovaSystem(String position) {
         this.position = position;
     }
 
@@ -39,6 +39,7 @@ public class SupernovaSystem implements Systems {
     }
 
     @Override
+    //throws an exception with supernova string parameter.
     public Player spaceBattle(Player redPlayer, Player bluePlayer) throws InvalidSpaceBattleException {
         throw new InvalidSpaceBattleException("supernova");
     }

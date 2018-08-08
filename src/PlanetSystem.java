@@ -14,7 +14,7 @@ kshn16@student.aau.dk */
 public class PlanetSystem implements Systems{
     private String position;
     private ArrayList<Planet> planetList;
-    private ArrayList<Units> spaceshipsInsidePlanetSystem = new ArrayList<Units>();
+    private ArrayList<Units> spaceshipsInsidePlanetSystem = new ArrayList<>();
 
     //constructor with position and arrayList for initializing without planets.
     PlanetSystem(String position, ArrayList<Planet> planetList) throws ContainsMoreThan3PlanetsException {
@@ -27,7 +27,7 @@ public class PlanetSystem implements Systems{
         }
     }
     //constructor with position and arrayList for initializing with planets via varargs.
-    PlanetSystem(String position, ArrayList<Planet> planetList, Planet... planets) throws ContainsMoreThan3PlanetsException {
+    PlanetSystem(String position, ArrayList<Planet> planetList, Planet ... planets) throws ContainsMoreThan3PlanetsException {
         this.position = position;
         if (planetList.size() <= 3 && planets.length <= 3) {
             //var args parses an array and Array.asList converts it to a list.
@@ -44,6 +44,7 @@ public class PlanetSystem implements Systems{
     public void flySpaceshipToSystem(Units spaceship) {
         spaceshipsInsidePlanetSystem.add(spaceship);
     }
+
     //adds multiple ships via varargs. the method is overloaded.
     void flySpaceshipToSystem(Units ... spaceship) {
         spaceshipsInsidePlanetSystem.addAll(Arrays.asList(spaceship));
@@ -70,6 +71,7 @@ public class PlanetSystem implements Systems{
     void flySpaceshipAwayFromSystem(Units spaceship) {
         spaceshipsInsidePlanetSystem.remove(spaceship);
     }
+
     //prints all the ships that resides in the current planet system.
     void retrieveAllSpaceships() throws ContainsNoSpaceshipsException {
         if (spaceshipsInsidePlanetSystem.isEmpty()) {
@@ -84,6 +86,7 @@ public class PlanetSystem implements Systems{
     }
 
     @Override
+    //resolves a space battle between two players who has spaceships in this system.
     public Player spaceBattle(Player redPlayer, Player bluePlayer) throws InvalidSpaceBattleException {
         ArrayList<Units> spaceshipsRed = new ArrayList<Units>();
         ArrayList<Units> spaceshipsBlue = new ArrayList<Units>();
@@ -145,7 +148,7 @@ public class PlanetSystem implements Systems{
         //returns who won via the conditional operator.
         return spaceshipsRed.isEmpty() ? bluePlayer : redPlayer;
     }
-
+    //returns a number from 1 to 10.
     private int getNumberFrom1to10() {
         Random rand = new Random();
         return rand.nextInt(10) + 1;

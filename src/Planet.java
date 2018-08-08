@@ -24,10 +24,6 @@ public class Planet {
     public String getName() {
         return name;
     }
-    //TODO: Usable?
-    public int getResourceProduction() {
-        return resourceProduction;
-    }
 
     @Override
     public boolean equals(Object o) {

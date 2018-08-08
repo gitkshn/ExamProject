@@ -96,7 +96,7 @@ class RandomGalaxy {
             return null;
         }
     }
-    //returns an arrayList with zero to 3 planets.
+    //returns an arrayList with 0 to 3 planets.
     private ArrayList<Planet> get0To3Planets(PlanetArray planetArray) {
         ArrayList<Planet> planetArrayList = new ArrayList<>();
 

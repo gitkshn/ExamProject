@@ -2,10 +2,6 @@
 kshn16@student.aau.dk */
 package Resources;
 
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Random;
 //enum for all the races with a getRandomRace method to return a single race as a string.
 public enum Races {
     EMIRATES_OF_HACAN,
@@ -23,19 +19,5 @@ public enum Races {
     MENTAK_COALITION,
     XXCHA_KINGDOMS,
     ARBOREC,
-    WINNU;
-
-    //makes an arrayList of the enum constants and returns a random race as a string.
-    public String getRandomRace() {
-        ArrayList<Races> racesArrayList = new ArrayList<>(Arrays.asList(Races.values()));
-        Random rand = new Random();
-        int seed = rand.nextInt(racesArrayList.size());
-
-        return racesArrayList.get(seed).name();
-    }
-    //TODO: useable?
-    //returns an arrayList of all the enum constants.
-    public ArrayList<Races> getRacesArrayList() {
-        return new ArrayList<>(Arrays.asList(Races.values()));
-    }
+    WINNU
 }

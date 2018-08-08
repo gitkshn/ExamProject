@@ -15,7 +15,5 @@ class RandomGalaxyTest {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-
     }
 }
