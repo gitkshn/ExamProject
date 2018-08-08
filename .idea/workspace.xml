@@ -9,9 +9,6 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="CodeInsightWorkspaceSettings">
-    <option name="optimizeImportsOnTheFly" value="true" />
-  </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/ExamProject$All_in_ExamProject.ic" NAME="All in ExamProject Coverage Results" MODIFIED="1533561241314" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
@@ -19,34 +16,35 @@
     <session id="427207344">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="4" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.11" value="2" />
+          <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.5" value="1" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="60" />
+          <entry key="java" value="68" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="60" />
+          <entry key="JAVA" value="68" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="51" />
+          <entry key="dummy" value="148" />
           <entry key="ft" value="74" />
-          <entry key="java" value="15188" />
+          <entry key="java" value="17447" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="15188" />
-          <entry key="PLAIN_TEXT" value="51" />
+          <entry key="JAVA" value="17447" />
+          <entry key="PLAIN_TEXT" value="148" />
           <entry key="VTL" value="74" />
         </counts>
       </usages-collector>
@@ -54,11 +52,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/PredefinedGalaxy.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Systems.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="517">
-              <caret line="46" column="114" selection-start-line="46" selection-start-column="114" selection-end-line="46" selection-end-column="114" />
+            <state relative-caret-position="170">
+              <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -69,8 +67,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Test/PredefinedGalaxyTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+            <state relative-caret-position="177">
+              <caret line="27" column="121" selection-start-line="27" selection-start-column="121" selection-end-line="27" selection-end-column="121" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -79,60 +77,50 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/PlanetSystem.java">
+        <entry file="file://$PROJECT_DIR$/Test/AsteroidFieldSystemTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
-              <caret line="61" column="23" selection-start-line="61" selection-start-column="23" selection-end-line="61" selection-end-column="23" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#868#869#0" expanded="true" />
-                <element signature="e#927#928#0" expanded="true" />
-                <element signature="e#1737#1738#0" expanded="true" />
-                <element signature="e#1814#1815#0" expanded="true" />
-                <element signature="e#1320#1321#0" expanded="true" />
-                <element signature="e#1351#1352#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="102">
+              <caret line="6" selection-start-line="6" selection-end-line="6" selection-end-column="49" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AsteroidFieldSystem.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="415">
-              <caret line="37" column="23" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#328#329#0" expanded="true" />
-                <element signature="e#368#369#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Galaxy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="347">
-              <caret line="37" column="31" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="31" />
+            <state relative-caret-position="364">
+              <caret line="122" column="72" selection-start-line="122" selection-start-column="72" selection-end-line="122" selection-end-column="72" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#224#225#0" expanded="true" />
-                <element signature="e#270#271#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SupernovaSystem.java">
+        <entry file="file://$PROJECT_DIR$/src/Exceptions/SystemsAreNotPositionedOppositeException.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="29" column="120" selection-start-line="29" selection-start-column="120" selection-end-line="29" selection-end-column="120" />
+            <state relative-caret-position="119">
+              <caret line="7" column="76" selection-start-line="7" selection-start-column="76" selection-end-line="7" selection-end-column="76" />
+              <folding>
+                <element signature="e#205#206#0" expanded="true" />
+                <element signature="e#246#247#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Planet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="31" column="37" selection-start-line="31" selection-start-column="37" selection-end-line="31" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#320#321#0" expanded="true" />
-                <element signature="e#360#361#0" expanded="true" />
+                <element signature="e#815#816#0" expanded="true" />
+                <element signature="e#856#857#0" expanded="true" />
+                <element signature="e#1241#1242#0" expanded="true" />
+                <element signature="e#1302#1303#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -145,8 +133,8 @@
       <list>
         <option value="Enum" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -167,7 +155,6 @@
         <option value="$PROJECT_DIR$/src/Units/LightCruiser.java" />
         <option value="$PROJECT_DIR$/Test/Units/SpaceshipUnitsTest.java" />
         <option value="$PROJECT_DIR$/Test/Units/PlayerTest.java" />
-        <option value="$PROJECT_DIR$/src/Planet.java" />
         <option value="$PROJECT_DIR$/src/Exceptions/PlanetSystemHasOver6NeighboringSystems.java" />
         <option value="$PROJECT_DIR$/src/Exceptions/HasOver6NeighboringSystems.java" />
         <option value="$PROJECT_DIR$/src/Exceptions/HasOver6NeighboringSystemsException.java" />
@@ -181,14 +168,21 @@
         <option value="$PROJECT_DIR$/src/Systems.java" />
         <option value="$PROJECT_DIR$/Test/GalaxyTest.java" />
         <option value="$PROJECT_DIR$/src/Resources/PlanetNames.java" />
-        <option value="$PROJECT_DIR$/Test/AsteroidFieldSystemTest.java" />
         <option value="$PROJECT_DIR$/Test/SupernovaSystemTest.java" />
         <option value="$PROJECT_DIR$/src/PredefinedGalaxy.java" />
         <option value="$PROJECT_DIR$/src/PlanetSystem.java" />
-        <option value="$PROJECT_DIR$/src/AsteroidFieldSystem.java" />
         <option value="$PROJECT_DIR$/src/SupernovaSystem.java" />
-        <option value="$PROJECT_DIR$/src/Galaxy.java" />
+        <option value="$PROJECT_DIR$/src/AsteroidFieldSystem.java" />
+        <option value="$PROJECT_DIR$/Test/AsteroidFieldSystemTest.java" />
         <option value="$PROJECT_DIR$/Test/PredefinedGalaxyTest.java" />
+        <option value="$PROJECT_DIR$/src/Exceptions/DoesNotContainMecatolRexException.java" />
+        <option value="$PROJECT_DIR$/src/Exceptions/DoesNotContainExactlyOnePlanetException.java" />
+        <option value="$PROJECT_DIR$/src/Exceptions/CenterSystemContainsMultiplePlanetsException.java" />
+        <option value="$PROJECT_DIR$/src/Planet.java" />
+        <option value="$PROJECT_DIR$/src/Exceptions/GalaxyHasDuplicatePlanets.java" />
+        <option value="$PROJECT_DIR$/src/Exceptions/SystemHasMoreThan3PlanetsException.java" />
+        <option value="$PROJECT_DIR$/src/Exceptions/SystemsAreNotPositionedOppositeException.java" />
+        <option value="$PROJECT_DIR$/src/Galaxy.java" />
       </list>
     </option>
   </component>
@@ -198,7 +192,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-98" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
@@ -261,8 +255,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="AndroidView" />
     </panes>
   </component>
@@ -272,7 +266,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533645938253" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533725241011" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -304,7 +298,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.All in ExamProject">
+  <component name="RunManager" selected="JUnit.PredefinedGalaxyTest.getGalaxySpaceshipsTest">
     <configuration name="All in ExamProject" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ExamProject" />
       <option name="PACKAGE_NAME" value="" />
@@ -318,16 +312,6 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="AsteroidFieldSystemTest" />
       <option name="METHOD_NAME" value="flySpaceshipAwayFromSystem" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AsteroidFieldSystemTest.flySpaceshipToSystem" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ExamProject" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="AsteroidFieldSystemTest" />
-      <option name="METHOD_NAME" value="flySpaceshipToSystem" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -353,20 +337,30 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PredefinedGalaxyTest.getGalaxySpaceshipsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ExamProject" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PredefinedGalaxyTest" />
+      <option name="METHOD_NAME" value="getGalaxySpaceshipsTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="JUnit.AsteroidFieldSystemTest.flySpaceshipToSystem" />
       <item itemvalue="JUnit.AsteroidFieldSystemTest.getPlanetList" />
       <item itemvalue="JUnit.AsteroidFieldSystemTest.flySpaceshipAwayFromSystem" />
       <item itemvalue="JUnit.PredefinedGalaxyTest.getGalaxy" />
       <item itemvalue="JUnit.All in ExamProject" />
+      <item itemvalue="JUnit.PredefinedGalaxyTest.getGalaxySpaceshipsTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.All in ExamProject" />
+        <item itemvalue="JUnit.PredefinedGalaxyTest.getGalaxySpaceshipsTest" />
         <item itemvalue="JUnit.PredefinedGalaxyTest.getGalaxy" />
+        <item itemvalue="JUnit.All in ExamProject" />
         <item itemvalue="JUnit.AsteroidFieldSystemTest.flySpaceshipAwayFromSystem" />
         <item itemvalue="JUnit.AsteroidFieldSystemTest.getPlanetList" />
-        <item itemvalue="JUnit.AsteroidFieldSystemTest.flySpaceshipToSystem" />
       </list>
     </recent_temporary>
   </component>
@@ -383,50 +377,51 @@
       <workItem from="1533476832722" duration="2545000" />
       <workItem from="1533499116054" duration="8051000" />
       <workItem from="1533554921401" duration="29303000" />
-      <workItem from="1533637704330" duration="7828000" />
+      <workItem from="1533637704330" duration="7983000" />
+      <workItem from="1533718674073" duration="6561000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="PredefinedGalaxyTest_getGalaxy - 2018.08.07 at 14h 32m 40s.xml">
-      <configuration name="PredefinedGalaxyTest.getGalaxy" configurationId="JUnit" />
+    <history-entry file="PredefinedGalaxyTest_getGalaxySpaceshipsTest - 2018.08.08 at 11h 32m 18s.xml">
+      <configuration name="PredefinedGalaxyTest.getGalaxySpaceshipsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PredefinedGalaxyTest_getGalaxy - 2018.08.07 at 14h 32m 51s.xml">
-      <configuration name="PredefinedGalaxyTest.getGalaxy" configurationId="JUnit" />
+    <history-entry file="PredefinedGalaxyTest_getGalaxySpaceshipsTest - 2018.08.08 at 11h 33m 11s.xml">
+      <configuration name="PredefinedGalaxyTest.getGalaxySpaceshipsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PredefinedGalaxyTest_getGalaxy - 2018.08.07 at 14h 33m 12s.xml">
-      <configuration name="PredefinedGalaxyTest.getGalaxy" configurationId="JUnit" />
+    <history-entry file="PredefinedGalaxyTest_getGalaxySpaceshipsTest - 2018.08.08 at 11h 33m 28s.xml">
+      <configuration name="PredefinedGalaxyTest.getGalaxySpaceshipsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PredefinedGalaxyTest_getGalaxy - 2018.08.07 at 14h 33m 33s.xml">
-      <configuration name="PredefinedGalaxyTest.getGalaxy" configurationId="JUnit" />
+    <history-entry file="PredefinedGalaxyTest_getGalaxySpaceshipsTest - 2018.08.08 at 11h 34m 09s.xml">
+      <configuration name="PredefinedGalaxyTest.getGalaxySpaceshipsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PredefinedGalaxyTest_getGalaxy - 2018.08.07 at 14h 35m 28s.xml">
-      <configuration name="PredefinedGalaxyTest.getGalaxy" configurationId="JUnit" />
+    <history-entry file="PredefinedGalaxyTest_getGalaxySpaceshipsTest - 2018.08.08 at 11h 35m 18s.xml">
+      <configuration name="PredefinedGalaxyTest.getGalaxySpaceshipsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PredefinedGalaxyTest_getGalaxy - 2018.08.07 at 14h 35m 46s.xml">
-      <configuration name="PredefinedGalaxyTest.getGalaxy" configurationId="JUnit" />
+    <history-entry file="PredefinedGalaxyTest_getGalaxySpaceshipsTest - 2018.08.08 at 11h 35m 32s.xml">
+      <configuration name="PredefinedGalaxyTest.getGalaxySpaceshipsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PredefinedGalaxyTest_getGalaxy - 2018.08.07 at 14h 35m 55s.xml">
-      <configuration name="PredefinedGalaxyTest.getGalaxy" configurationId="JUnit" />
+    <history-entry file="PredefinedGalaxyTest_getGalaxySpaceshipsTest - 2018.08.08 at 11h 36m 08s.xml">
+      <configuration name="PredefinedGalaxyTest.getGalaxySpaceshipsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PredefinedGalaxyTest_getGalaxy - 2018.08.07 at 14h 36m 04s.xml">
-      <configuration name="PredefinedGalaxyTest.getGalaxy" configurationId="JUnit" />
+    <history-entry file="PredefinedGalaxyTest_getGalaxySpaceshipsTest - 2018.08.08 at 11h 36m 24s.xml">
+      <configuration name="PredefinedGalaxyTest.getGalaxySpaceshipsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PredefinedGalaxyTest_getGalaxy - 2018.08.07 at 14h 41m 19s.xml">
-      <configuration name="PredefinedGalaxyTest.getGalaxy" configurationId="JUnit" />
+    <history-entry file="PredefinedGalaxyTest_getGalaxySpaceshipsTest - 2018.08.08 at 11h 36m 34s.xml">
+      <configuration name="PredefinedGalaxyTest.getGalaxySpaceshipsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PredefinedGalaxyTest_getGalaxy - 2018.08.07 at 14h 43m 43s.xml">
-      <configuration name="PredefinedGalaxyTest.getGalaxy" configurationId="JUnit" />
+    <history-entry file="PredefinedGalaxyTest_getGalaxySpaceshipsTest - 2018.08.08 at 11h 36m 49s.xml">
+      <configuration name="PredefinedGalaxyTest.getGalaxySpaceshipsTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47727000" />
+    <option name="totallyTimeSpent" value="54443000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24427083" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24427083" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -434,7 +429,7 @@
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32944915" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32944915" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32944915" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3993644" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -536,19 +531,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Planet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="76" selection-start-line="11" selection-start-column="76" selection-end-line="11" selection-end-column="76" />
-          <folding>
-            <element signature="e#671#672#0" expanded="true" />
-            <element signature="e#698#699#0" expanded="true" />
-            <element signature="e#740#741#0" expanded="true" />
-            <element signature="e#781#782#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Exceptions/InvalidResourceProductionException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -629,16 +611,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Systems.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Test/GalaxyTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="799">
@@ -656,16 +628,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Test/AsteroidFieldSystemTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="84" selection-start-line="11" selection-start-column="84" selection-end-line="11" selection-end-column="84" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Test/SupernovaSystemTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -680,9 +642,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/PredefinedGalaxy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="46" column="114" selection-start-line="46" selection-start-column="114" selection-end-line="46" selection-end-column="114" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PlanetSystem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
+          <caret line="61" column="23" selection-start-line="61" selection-start-column="23" selection-end-line="61" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AsteroidFieldSystem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="30" column="27" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#328#329#0" expanded="true" />
+            <element signature="e#368#369#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/SupernovaSystem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
+        <state relative-caret-position="391">
           <caret line="29" column="120" selection-start-line="29" selection-start-column="120" selection-end-line="29" selection-end-column="120" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -692,60 +686,102 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PlanetSystem.java">
+    <entry file="file://$PROJECT_DIR$/src/Systems.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="61" column="23" selection-start-line="61" selection-start-column="23" selection-end-line="61" selection-end-column="23" />
+        <state relative-caret-position="170">
+          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#868#869#0" expanded="true" />
-            <element signature="e#927#928#0" expanded="true" />
-            <element signature="e#1737#1738#0" expanded="true" />
-            <element signature="e#1814#1815#0" expanded="true" />
-            <element signature="e#1320#1321#0" expanded="true" />
-            <element signature="e#1351#1352#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AsteroidFieldSystem.java">
+    <entry file="file://$PROJECT_DIR$/Test/AsteroidFieldSystemTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="37" column="23" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
+        <state relative-caret-position="102">
+          <caret line="6" selection-start-line="6" selection-end-line="6" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test/PredefinedGalaxyTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="27" column="121" selection-start-line="27" selection-start-column="121" selection-end-line="27" selection-end-column="121" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#328#329#0" expanded="true" />
-            <element signature="e#368#369#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Exceptions/DoesNotContainMecatolRexException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="63" selection-start-line="7" selection-start-column="63" selection-end-line="7" selection-end-column="63" />
+          <folding>
+            <element signature="e#198#199#0" expanded="true" />
+            <element signature="e#221#222#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Exceptions/CenterSystemContainsMultiplePlanetsException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="60" selection-start-line="7" selection-start-column="60" selection-end-line="7" selection-end-column="60" />
+          <folding>
+            <element signature="e#204#205#0" expanded="true" />
+            <element signature="e#245#246#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Planet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="31" column="37" selection-start-line="31" selection-start-column="37" selection-end-line="31" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#815#816#0" expanded="true" />
+            <element signature="e#856#857#0" expanded="true" />
+            <element signature="e#1241#1242#0" expanded="true" />
+            <element signature="e#1302#1303#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Exceptions/GalaxyHasDuplicatePlanets.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="100" selection-start-line="7" selection-start-column="100" selection-end-line="7" selection-end-column="100" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Exceptions/SystemHasMoreThan3PlanetsException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="57" selection-start-line="7" selection-start-column="57" selection-end-line="7" selection-end-column="57" />
+          <folding>
+            <element signature="e#198#199#0" expanded="true" />
+            <element signature="e#239#240#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Exceptions/SystemsAreNotPositionedOppositeException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="76" selection-start-line="7" selection-start-column="76" selection-end-line="7" selection-end-column="76" />
+          <folding>
+            <element signature="e#205#206#0" expanded="true" />
+            <element signature="e#246#247#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Galaxy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="37" column="31" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#224#225#0" expanded="true" />
-            <element signature="e#270#271#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Test/PredefinedGalaxyTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PredefinedGalaxy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="517">
-          <caret line="46" column="114" selection-start-line="46" selection-start-column="114" selection-end-line="46" selection-end-column="114" />
+        <state relative-caret-position="364">
+          <caret line="122" column="72" selection-start-line="122" selection-start-column="72" selection-end-line="122" selection-end-column="72" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
