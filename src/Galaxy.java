@@ -22,7 +22,7 @@ public class Galaxy {
         this.SystemsList = SystemsList;
     }
 
-    void findAllSystems() {
+    public void findAllSystems() {
         System.out.println("The following systems resides in this Galaxy:");
         for (Systems systems : SystemsList) {
             System.out.println(systems.getClass().getSimpleName() + ": " + systems.getPosition());
@@ -209,8 +209,5 @@ public class Galaxy {
             e.printStackTrace();
         }
     }
-    Galaxy getRandomGalaxy() {
-        
-        return null;
-    }
+
 }

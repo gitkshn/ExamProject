@@ -28,4 +28,5 @@ public enum PlanetNames {
     RIGEL_I,
     RIGEL_II,
     MIRAGE,
+
 }
