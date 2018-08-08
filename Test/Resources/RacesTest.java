@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
 /* Kasper Suamchiang Hvitfeldt Nielsen.
 kshn16@student.aau.dk */
 class RacesTest {
-
+    //TODO: SLET?
     @Test
     void getRandomRace() {
         try {
@@ -20,7 +20,7 @@ class RacesTest {
             assert false;
         }
     }
-
+    //TODO: SLET?
     @Test
     void getRacesArrayList() {
         try {

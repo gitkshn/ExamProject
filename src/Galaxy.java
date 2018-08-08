@@ -47,37 +47,51 @@ class Galaxy {
         }
     }
 
-    public boolean isLegal() throws Exception {
-        return false;
+    boolean isLegal() throws Exception {
+        return hasMecatolRexInCenterSystem() && doesNotContainDuplicatePlanets()
+                && doesNotHaveMoreThan3PlanetsInASystem() && isAllOppositeSystemPositionsCorrect();
     }
 
-    boolean hasMecatolRexInCenterSystem() throws DoesNotContainMecatolRexException, CenterSystemContainsMultiplePlanetsException {
-
+    boolean hasMecatolRexInCenterSystem() throws DoesNotContainMecatolRexException, CenterSystemContainsMultiplePlanetsException, GalaxyContainsMultipleMecatolRexException {
+        //checks if the center system has the correct position and contains the planet called mecatol rex. if not, an exception is thrown.
         if (!(SystemsList.get(0).getPosition().contains("Center") &&
                 SystemsList.get(0).getPlanetList().get(0).getName().contains(PlanetNames.MECATOL_REX.name()))) {
             throw new DoesNotContainMecatolRexException();
         }
-
+        //there should only be one planet in the planet list and that is mecatol rex. An exception will be thrown otherwise.
         if (1 < SystemsList.get(0).getPlanetList().size()) {
             throw new CenterSystemContainsMultiplePlanetsException();
+        }
+        //mecatol rex should only exist in the center system and not anywhere else.
+        int mecatolRexPlanets = 0;
+        for (Systems systems : SystemsList) {
+            for (Planet planet : systems.getPlanetList()) {
+                if (planet.getName().contains(PlanetNames.MECATOL_REX.name())) {
+                    mecatolRexPlanets++;
+                    if (mecatolRexPlanets != 1) {
+                        throw new GalaxyContainsMultipleMecatolRexException();
+                    }
+                }
+            }
         }
         return true;
     }
 
     boolean doesNotContainDuplicatePlanets() throws GalaxyHasDuplicatePlanets {
-        ArrayList<Planet> allPlanetsList = new ArrayList<>();
+        ArrayList<Planet> totalPlanetList = new ArrayList<>();
 
         for (Systems systems : SystemsList) {
-            allPlanetsList.addAll(systems.getPlanetList());
+            totalPlanetList.addAll(systems.getPlanetList());
 
         }
-        int allPlanetsListSize = allPlanetsList.size();
-        for (Planet planet : allPlanetsList) {
-            for (int j = 1; j < allPlanetsListSize; j++) {
-                if (planet.equals(allPlanetsList.get(j))) {
+        /*iterates through the list and checks whether the i'th planet is equal to the j'th + 1 planet.
+         * +1 is used so it does not run equals on it self.*/
+        int totalPlanetListSize = totalPlanetList.size();
+        for (int i = 0; i < totalPlanetListSize; i++) {
+            for (int j = 1 + i; j < totalPlanetListSize; j++) {
+                if (totalPlanetList.get(i).equals(totalPlanetList.get(j))) {
                     throw new GalaxyHasDuplicatePlanets();
                 }
-
             }
         }
         return true;
@@ -92,6 +106,7 @@ class Galaxy {
         }
         return true;
     }
+    //checks whether a galaxy with 7 systems is aligned correctly.
     boolean isAllOppositeSystemPositionsCorrect() throws Exception {
         //map defines a key-value pair that is used to determine if the opposite direction is correct via integers.
         Map<String, Integer> map = new HashMap();
