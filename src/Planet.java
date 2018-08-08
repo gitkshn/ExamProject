@@ -4,7 +4,7 @@ import java.util.Objects;
 
 /* Kasper Suamchiang Hvitfeldt Nielsen.
 kshn16@student.aau.dk */
-public class Planet {
+class Planet {
     private String name;
     private int resourceProduction;
 
@@ -15,11 +15,11 @@ public class Planet {
         //resource production should be between [0-6] otherwise an exception is thrown.
         if (0 <= resourceProduction && resourceProduction <= 6) {
             this.resourceProduction = resourceProduction;
-        }
-        else {
+        } else {
             throw new InvalidResourceProductionException();
         }
     }
+
     //returns the name of the planet.
     public String getName() {
         return name;

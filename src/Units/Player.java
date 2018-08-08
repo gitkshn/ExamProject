@@ -1,6 +1,7 @@
 package Units;
 /* Kasper Suamchiang Hvitfeldt Nielsen
 kshn16@student.aau.dk */
+
 import java.util.Objects;
 
 public class Player {
@@ -9,18 +10,21 @@ public class Player {
     private String color;
 
     //constructor.
-    public Player (String name, String race, String color) {
+    public Player(String name, String race, String color) {
         this.name = name;
         this.race = race;
         this.color = color;
     }
+
     //getters.
     public String getName() {
         return name;
     }
+
     public String getRace() {
         return race;
     }
+
     public String getColor() {
         return color;
     }

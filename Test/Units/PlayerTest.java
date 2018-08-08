@@ -16,6 +16,7 @@ class PlayerTest {
         assertEquals(tim, tim);
         assertNotEquals(jim, tim);
     }
+
     @Test
     void GettersTest() {
         assertEquals(jim.getColor(), "Red");

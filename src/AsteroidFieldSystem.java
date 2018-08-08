@@ -1,8 +1,8 @@
 import Exceptions.InvalidSpaceBattleException;
-import Units.Units;
 import Units.*;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 /* Kasper Suamchiang Hvitfeldt Nielsen.
 kshn16@student.aau.dk */
@@ -44,14 +44,11 @@ public class AsteroidFieldSystem implements Systems {
     @Override
     //throws an exception with string parameter asteroidField.
     public Player spaceBattle(Player redPlayer, Player bluePlayer) throws InvalidSpaceBattleException {
-        throw new  InvalidSpaceBattleException("asteroidField");
+        throw new InvalidSpaceBattleException("asteroidField");
     }
+
     //removes the spaceship if the player has dreadnought present in the asteroid field.
     void flySpaceshipAwayFromSystem(Player player) {
-        for (Units spaceship : spaceshipsInsideAsteroidField) {
-            if (spaceship.getOwner().equals(player)) {
-                spaceshipsInsideAsteroidField.remove(spaceship);
-            }
-        }
+        spaceshipsInsideAsteroidField.removeIf(spaceship -> spaceship.getOwner().equals(player));
     }
 }

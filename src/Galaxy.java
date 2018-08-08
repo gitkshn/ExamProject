@@ -17,7 +17,7 @@ class Galaxy {
         this.SystemsList = SystemsList;
     }
 
-    Galaxy(ArrayList<Systems> SystemsList, Systems ... systems) {
+    Galaxy(ArrayList<Systems> SystemsList, Systems... systems) {
         SystemsList.addAll(Arrays.asList(systems));
         this.SystemsList = SystemsList;
     }
@@ -108,6 +108,7 @@ class Galaxy {
         }
         return true;
     }
+
     //checks whether a galaxy with 7 systems is aligned correctly.
     boolean isAllOppositeSystemPositionsCorrect() throws Exception {
         //map defines a key-value pair that is used to determine if the opposite direction is correct via integers.
@@ -145,6 +146,7 @@ class Galaxy {
 
         return true;
     }
+
     //returns an arrayList with all the spaceships the player owns in a sorted list.
     ArrayList<Units> returnAllShipsOwnedByPlayer(Player player) {
         ArrayList<Units> spaceshipsOwnedByPlayer = new ArrayList<Units>();
@@ -204,7 +206,7 @@ class Galaxy {
                     }
                 }
             }
-        //bufferedWriter, OutputStreamWriter and FileOutputStream can throw an IOException.
+            //bufferedWriter, OutputStreamWriter and FileOutputStream can throw an IOException.
         } catch (Exception e) {
             System.out.println(e.getMessage());
             e.printStackTrace();

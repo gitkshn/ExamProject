@@ -2,13 +2,14 @@ package Units;
 
 import Resources.Races;
 import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 /* Kasper Suamchiang Hvitfeldt Nielsen.
 kshn16@student.aau.dk */
 class SpaceshipUnitsTest {
     //declare a player which is to be used in the constructing of the units.
-    private Player Hans= new Player("Hans", Races.EMIRATES_OF_HACAN.name(), "Blue");
+    private Player Hans = new Player("Hans", Races.EMIRATES_OF_HACAN.name(), "Blue");
 
     @Test
     void DestroyerTest() {
@@ -45,8 +46,6 @@ class SpaceshipUnitsTest {
         Dreadnought dreadnought = new Dreadnought(Hans);
         assertEquals(Hans, dreadnought.getOwner());
     }
-
-
 
 
 }

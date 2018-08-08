@@ -69,7 +69,7 @@ class PlanetSystemTest {
     }
 
     @Test
-    //should throw a InvalidSpaceBattleException.
+        //should throw a InvalidSpaceBattleException.
     void InvalidSpaceBattle() {
         PredefinedGalaxy predefinedGalaxy = new PredefinedGalaxy();
         Galaxy testGalaxy = predefinedGalaxy.getGalaxy();
@@ -84,11 +84,11 @@ class PlanetSystemTest {
     }
 
     @Test
-    //resolves a space battle between two brothers.
+        //resolves a space battle between two brothers.
     void spaceBattle() {
         try {
             PlanetSystem planetSystem = new PlanetSystem("Center", new ArrayList<>());
-            Player playerRed = new Player("Clegane", Races.XXCHA_KINGDOMS.name(),"Black");
+            Player playerRed = new Player("Clegane", Races.XXCHA_KINGDOMS.name(), "Black");
             Player playerBlue = new Player("Sandor", Races.BROTHERHOOD_OF_YIN.name(), "Gray");
 
             Carrier carrier = new Carrier(playerRed);
@@ -104,8 +104,7 @@ class PlanetSystemTest {
             Player winner = planetSystem.spaceBattle(playerRed, playerBlue);
             if (winner == null) {
                 System.out.println("All ships were destroyed.");
-            }
-            else {
+            } else {
                 System.out.println("The winner is: " + winner);
             }
             assert true;

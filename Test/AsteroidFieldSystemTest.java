@@ -27,7 +27,7 @@ class AsteroidFieldSystemTest {
 
 
     @Test
-    //the planet list should return an empty list as specified in the method.
+        //the planet list should return an empty list as specified in the method.
     void getPlanetList() {
         assertTrue(asteroidFieldSystem.getPlanetList().isEmpty());
     }
@@ -37,8 +37,9 @@ class AsteroidFieldSystemTest {
         //the dreadnought enters the system.
         asteroidFieldSystem.flySpaceshipToSystem(dreadnought);
         assertTrue(asteroidFieldSystem.getSpaceshipsInsideSystem().contains(dreadnought));
+
         //the dreadnought leaves the system and the list should not contain the dreadnought anymore.
-        asteroidFieldSystem.flySpaceshipAwayFromSystem(dreadnought);
+        asteroidFieldSystem.flySpaceshipAwayFromSystem(cercei);
         assertFalse(asteroidFieldSystem.getSpaceshipsInsideSystem().contains(dreadnought));
 
     }

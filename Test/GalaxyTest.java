@@ -13,13 +13,13 @@ kshn16@student.aau.dk */
 class GalaxyTest {
 
     @Test
-    //main test method for this class. Runs some methods that needs a galaxy parameter.
+        //main test method for this class. Runs some methods that needs a galaxy parameter.
     void runAllTestMethods() {
         //instantiate the different objects used to define the galaxy.
         try {
             Planet planet1 = new Planet(PlanetNames.BELLATRIX.name(), 3);
-            Planet planet2 = new Planet(PlanetNames.ABYZ.name(),4);
-            Planet planet3 = new Planet(PlanetNames.MECATOL_REX.name(),6);
+            Planet planet2 = new Planet(PlanetNames.ABYZ.name(), 4);
+            Planet planet3 = new Planet(PlanetNames.MECATOL_REX.name(), 6);
 
             ArrayList<Planet> planetArrayList1 = new ArrayList<>();
             ArrayList<Planet> planetArrayList2 = new ArrayList<>();
@@ -31,8 +31,8 @@ class GalaxyTest {
             planetArrayList2.add(planet3);
 
 
-            PlanetSystem planetSystem1 = new PlanetSystem("North",planetArrayList1);
-            PlanetSystem planetSystem2 = new PlanetSystem("South-West",planetArrayList2);
+            PlanetSystem planetSystem1 = new PlanetSystem("North", planetArrayList1);
+            PlanetSystem planetSystem2 = new PlanetSystem("South-West", planetArrayList2);
 
             Player player = new Player("Jon", Races.BROTHERHOOD_OF_YIN.name(), "White");
             Dreadnought dreadnought = new Dreadnought(player);
@@ -74,6 +74,7 @@ class GalaxyTest {
         assertEquals(2, galaxy.SystemsList.size());
 
     }
+
     //should print the carrier. Assertion checks if the carrier is listed in the system.
     private void findAllSpaceships(Galaxy galaxy, Carrier carrier) {
         galaxy.findAllSpaceships();
@@ -123,7 +124,7 @@ class GalaxyTest {
     }
 
     @Test
-    //test whether a 7 system galaxy is legal.
+        //test whether a 7 system galaxy is legal.
     void isAllOppositeSystemPositionsCorrect() {
         try {
             PlanetSystem centerPlanetSystem = new PlanetSystem("Center", new ArrayList<>());
@@ -149,7 +150,7 @@ class GalaxyTest {
     }
 
     @Test
-    //the predefinedGalaxy is legal, so the isLegal method should return true.
+        //the predefinedGalaxy is legal, so the isLegal method should return true.
     void isLegal() {
         PredefinedGalaxy predefinedGalaxy = new PredefinedGalaxy();
         try {

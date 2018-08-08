@@ -1,7 +1,7 @@
 package Units;/* Kasper Suamchiang Hvitfeldt Nielsen.
 kshn16@student.aau.dk */
 
-public class Carrier implements Units{
+public class Carrier implements Units {
     private int resourceCost = 3;
     private int combatValue = 9;
     private int movementSpeed = 1;

@@ -2,7 +2,6 @@ import Exceptions.ContainsMoreThan3PlanetsException;
 import Exceptions.ContainsNoSpaceshipsException;
 import Exceptions.InvalidSpaceBattleException;
 import Units.*;
-import Units.Units;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -11,7 +10,7 @@ import java.util.Random;
 
 /* Kasper Suamchiang Hvitfeldt Nielsen.
 kshn16@student.aau.dk */
-public class PlanetSystem implements Systems{
+public class PlanetSystem implements Systems {
     private String position;
     private ArrayList<Planet> planetList;
     private ArrayList<Units> spaceshipsInsidePlanetSystem = new ArrayList<>();
@@ -21,20 +20,19 @@ public class PlanetSystem implements Systems{
         this.position = position;
         if (planetList.size() <= 3) {
             this.planetList = planetList;
-        }
-        else {
+        } else {
             throw new ContainsMoreThan3PlanetsException();
         }
     }
+
     //constructor with position and arrayList for initializing with planets via varargs.
-    PlanetSystem(String position, ArrayList<Planet> planetList, Planet ... planets) throws ContainsMoreThan3PlanetsException {
+    PlanetSystem(String position, ArrayList<Planet> planetList, Planet... planets) throws ContainsMoreThan3PlanetsException {
         this.position = position;
         if (planetList.size() <= 3 && planets.length <= 3) {
             //var args parses an array and Array.asList converts it to a list.
             planetList.addAll(Arrays.asList(planets));
             this.planetList = planetList;
-        }
-        else {
+        } else {
             throw new ContainsMoreThan3PlanetsException();
         }
     }
@@ -46,7 +44,7 @@ public class PlanetSystem implements Systems{
     }
 
     //adds multiple ships via varargs. the method is overloaded.
-    void flySpaceshipToSystem(Units ... spaceship) {
+    void flySpaceshipToSystem(Units... spaceship) {
         spaceshipsInsidePlanetSystem.addAll(Arrays.asList(spaceship));
     }
 
@@ -76,8 +74,7 @@ public class PlanetSystem implements Systems{
     void retrieveAllSpaceships() throws ContainsNoSpaceshipsException {
         if (spaceshipsInsidePlanetSystem.isEmpty()) {
             throw new ContainsNoSpaceshipsException();
-        }
-        else {
+        } else {
             System.out.println("The " + position + " planet system contains the following ships:");
             for (Units spaceship : spaceshipsInsidePlanetSystem) {
                 System.out.println(spaceship.getOwner().getName() + " has a " + spaceship.getClass().getSimpleName());
@@ -94,8 +91,7 @@ public class PlanetSystem implements Systems{
         for (Units spaceship : spaceshipsInsidePlanetSystem) {
             if (spaceship.getOwner().equals(redPlayer)) {
                 spaceshipsRed.add(spaceship);
-            }
-            else if (spaceship.getOwner().equals(bluePlayer)) {
+            } else if (spaceship.getOwner().equals(bluePlayer)) {
                 spaceshipsBlue.add(spaceship);
             }
         }
@@ -117,8 +113,7 @@ public class PlanetSystem implements Systems{
             for (Units spaceship : spaceshipsRed) {
                 if (spaceship.getCombatValue() < getNumberFrom1to10()) {
                     redHits++;
-                }
-                else if (spaceship.getCombatValue() < getNumberFrom1to10()) {
+                } else if (spaceship.getCombatValue() < getNumberFrom1to10()) {
                     blueHits++;
                 }
             }
@@ -148,6 +143,7 @@ public class PlanetSystem implements Systems{
         //returns who won via the conditional operator.
         return spaceshipsRed.isEmpty() ? bluePlayer : redPlayer;
     }
+
     //returns a number from 1 to 10.
     private int getNumberFrom1to10() {
         Random rand = new Random();

@@ -1,6 +1,5 @@
 import Exceptions.InvalidSpaceBattleException;
 import Units.*;
-import Units.Units;
 
 import java.util.ArrayList;
 

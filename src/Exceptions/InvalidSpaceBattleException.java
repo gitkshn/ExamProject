@@ -4,7 +4,7 @@ package Exceptions;
 kshn16@student.aau.dk */
 public class InvalidSpaceBattleException extends Exception {
     //local getmessage string.
-    String getMessage;
+    private String getMessage;
 
     //constructor with different if-statements depending on the input parameter.
     public InvalidSpaceBattleException(String message) {

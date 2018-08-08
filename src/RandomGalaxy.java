@@ -25,13 +25,13 @@ class RandomGalaxy {
         for (Systems systems : systemsArrayList) {
             for (Player player : players) {
                 //assigns a random spaceship to a player in the current system and increments the systemWithSpaceship counter.
-                for (int i = 0; i < getRandomInt(2) ; i++) {
+                for (int i = 0; i < getRandomInt(2); i++) {
                     systems.flySpaceshipToSystem(spaceShipArray.getRandomSpaceShip(player));
                     systemsWithSpaceships++;
                 }
             }
             //assigns a random spaceship to 2 players in the current system.
-            if (systemsWithSpaceships < 2 ) {
+            if (systemsWithSpaceships < 2) {
                 systems.flySpaceshipToSystem(spaceShipArray.getRandomSpaceShip(players.get(0)));
                 systems.flySpaceshipToSystem(spaceShipArray.getRandomSpaceShip(players.get(1)));
             }
@@ -43,7 +43,7 @@ class RandomGalaxy {
     private ArrayList<Systems> get7Systems(PlanetArray planetArray) {
         try {
             //at index 0 there should always be a center system with Mecatol Rex.
-            PlanetSystem centerSystem = new PlanetSystem("Center", new ArrayList<>(),planetArray.getMecatolRex());
+            PlanetSystem centerSystem = new PlanetSystem("Center", new ArrayList<>(), planetArray.getMecatolRex());
             //gets a random system with the parameters system position and planetArray.
             Systems northSystem = getRandomSystem("North", planetArray);
             Systems northEastSystem = getRandomSystem("North-East", planetArray);
@@ -72,6 +72,7 @@ class RandomGalaxy {
         }
 
     }
+
     //get a pseudo random system. planet systems has a 50% chance while supernovas and asteroid field systems has 25% each.
     private Systems getRandomSystem(String systemName, PlanetArray planetArray) {
         try {
@@ -96,6 +97,7 @@ class RandomGalaxy {
             return null;
         }
     }
+
     //returns an arrayList with 0 to 3 planets.
     private ArrayList<Planet> get0To3Planets(PlanetArray planetArray) {
         ArrayList<Planet> planetArrayList = new ArrayList<>();
@@ -106,6 +108,7 @@ class RandomGalaxy {
         }
         return planetArrayList;
     }
+
     //method which returns an random int according to the seed.
     private int getRandomInt(int seedNumber) {
         Random rand = new Random();

@@ -7,12 +7,14 @@ public class Cruiser implements Units {
     private int movementSpeed = 2;
     private int capacity = 0;
     private Player owner;
+
     //constructor for cruiser unit.
     public Cruiser(Player owner) {
         this.owner = owner;
     }
+
     //constructor for the light cruiser unit.
-    public Cruiser(Player owner, int LCMovementSpeed) {
+    Cruiser(Player owner, int LCMovementSpeed) {
         this.owner = owner;
         this.movementSpeed = LCMovementSpeed;
     }

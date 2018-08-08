@@ -1,7 +1,9 @@
 import Resources.PlanetNames;
 import Units.Units;
 import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
+
 /* Kasper Suamchiang Hvitfeldt Nielsen.
 kshn16@student.aau.dk */
 class PredefinedGalaxyTest {
@@ -25,7 +27,7 @@ class PredefinedGalaxyTest {
     }
 
     @Test
-    //finds all the units in each system and checks whether the name and ship name is correct and increments the counter.
+        //finds all the units in each system and checks whether the name and ship name is correct and increments the counter.
     void getGalaxySpaceshipsTest() {
         int crassusUnitCount = 0, pompeyUnitCount = 0, totalSpaceships = 0;
 
@@ -42,6 +44,6 @@ class PredefinedGalaxyTest {
                 totalSpaceships++;
             }
         }
-        assertEquals(totalSpaceships,crassusUnitCount + pompeyUnitCount);
+        assertEquals(totalSpaceships, crassusUnitCount + pompeyUnitCount);
     }
 }

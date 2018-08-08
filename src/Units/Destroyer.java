@@ -7,6 +7,7 @@ public class Destroyer implements Units {
     private int movementSpeed = 2;
     private int capacity = 0;
     private Player owner;
+
     //constructor.
     public Destroyer(Player owner) {
         this.owner = owner;

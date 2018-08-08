@@ -6,7 +6,7 @@ public class LightCruiser extends Cruiser {
     private static int LightCruiserMovementSpeed = 3;
 
     //constructor.
-    public LightCruiser (Player owner) {
+    public LightCruiser(Player owner) {
         super(owner, LightCruiserMovementSpeed);
     }
 

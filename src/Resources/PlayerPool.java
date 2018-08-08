@@ -1,6 +1,7 @@
 package Resources;
 
 import Units.Player;
+
 import java.util.ArrayList;
 
 
@@ -28,11 +29,12 @@ public class PlayerPool {
         playerArrayList.add(player6);
 
     }
+
     //makes an arrayList object with players according to the input parameter on how many is needed.
     public ArrayList<Player> getRandomPlayers(int howMany) {
         ArrayList<Player> players = new ArrayList<>();
 
-        for (int i = 0; i < howMany ; i++) {
+        for (int i = 0; i < howMany; i++) {
             players.add(this.playerArrayList.get(i));
         }
         return players;

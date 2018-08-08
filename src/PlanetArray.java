@@ -6,7 +6,7 @@ import java.util.Random;
 
 /* Kasper Suamchiang Hvitfeldt Nielsen.
 kshn16@student.aau.dk */
-public class PlanetArray {
+class PlanetArray {
     //makes an arrayList of all planets available by instantiating the planets and adding them individually .
     private ArrayList<Planet> getAllPlanetsList() {
         try {
@@ -28,8 +28,8 @@ public class PlanetArray {
             Planet arinam = new Planet(PlanetNames.ARINAM.name(), 1);
             Planet coorneeq = new Planet(PlanetNames.COORNEEQ.name(), 1);
             Planet meharXull = new Planet(PlanetNames.MEHAR_XULL.name(), 1);
-            Planet arcturus = new Planet(PlanetNames.ARCTURUS.name(),1);
-            Planet bellatrix = new Planet(PlanetNames.BELLATRIX.name(),0);
+            Planet arcturus = new Planet(PlanetNames.ARCTURUS.name(), 1);
+            Planet bellatrix = new Planet(PlanetNames.BELLATRIX.name(), 0);
 
 
             allPlanetsList.add(arnor);
@@ -60,7 +60,7 @@ public class PlanetArray {
     }
 
     //arrayList who has all planets and gets reduced in size when a random planet is added to a planet system
-    public ArrayList<Planet> randomPlanetList = getAllPlanetsList();
+    private ArrayList<Planet> randomPlanetList = getAllPlanetsList();
 
     //gets a random planet from the randomPlanetsList and removes it from the list to keep from adding duplicate planets
     Planet getRandomPlanet() {
