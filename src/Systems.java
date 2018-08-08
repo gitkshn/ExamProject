@@ -1,3 +1,5 @@
+import Exceptions.InvalidSpaceBattleException;
+import Units.Player;
 import Units.Units;
 
 import java.util.ArrayList;
@@ -9,5 +11,6 @@ public interface Systems {
     ArrayList<Units> getSpaceshipsInsideSystem();
     ArrayList<Planet> getPlanetList();
     String getPosition();
+    Player spaceBattle(Player redPlayer, Player bluePlayer) throws InvalidSpaceBattleException;
 
 }

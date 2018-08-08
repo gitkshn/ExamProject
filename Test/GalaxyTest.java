@@ -166,12 +166,11 @@ class GalaxyTest {
         for (Units spaceship : spaceshipsOwnedByPlayer) {
             System.out.println(spaceship.getClass().getSimpleName());
         }
-
     }
+
     @Test
     void createTextFileContainingPlayersWithPlanetaryControl() {
         PredefinedGalaxy predefinedGalaxy = new PredefinedGalaxy();
         predefinedGalaxy.getGalaxy().createTextFileContainingPlayersWithPlanetaryControl();
-
     }
 }

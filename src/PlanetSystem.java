@@ -1,9 +1,13 @@
 import Exceptions.ContainsMoreThan3PlanetsException;
 import Exceptions.ContainsNoSpaceshipsException;
+import Exceptions.InvalidSpaceBattleException;
+import Units.*;
 import Units.Units;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
+import java.util.Random;
 
 /* Kasper Suamchiang Hvitfeldt Nielsen.
 kshn16@student.aau.dk */
@@ -79,8 +83,72 @@ public class PlanetSystem implements Systems{
         }
     }
 
+    @Override
+    public Player spaceBattle(Player redPlayer, Player bluePlayer) throws InvalidSpaceBattleException {
+        ArrayList<Units> spaceshipsRed = new ArrayList<Units>();
+        ArrayList<Units> spaceshipsBlue = new ArrayList<Units>();
+        //gathers the spaceship in the system into an arrayList according to their owner/player.
+        for (Units spaceship : spaceshipsInsidePlanetSystem) {
+            if (spaceship.getOwner().equals(redPlayer)) {
+                spaceshipsRed.add(spaceship);
+            }
+            else if (spaceship.getOwner().equals(bluePlayer)) {
+                spaceshipsBlue.add(spaceship);
+            }
+        }
+        //throws an InvalidSpaceBattleException if either of the players has no ships.
+        if (spaceshipsRed.isEmpty() || spaceshipsBlue.isEmpty()) {
+            throw new InvalidSpaceBattleException("emptyList");
+        }
+        //sorts the lists according to the spaceships with the lowest resource cost.
+        spaceshipsRed.sort(Comparator.comparingInt(Units::getResourceCost));
+        spaceshipsBlue.sort(Comparator.comparingInt(Units::getResourceCost));
 
+        boolean onGoingSpaceBattle = true;
 
+        while (onGoingSpaceBattle) {
+            //hits counter for each player.
+            int redHits = 0, blueHits = 0;
 
+            //each spaceship gets their combat value compared to a random number between 1-10 that determines a hit or not.
+            for (Units spaceship : spaceshipsRed) {
+                if (spaceship.getCombatValue() < getNumberFrom1to10()) {
+                    redHits++;
+                }
+                else if (spaceship.getCombatValue() < getNumberFrom1to10()) {
+                    blueHits++;
+                }
+            }
+            //removes the weakest ships according to hits.
+            for (int i = 0; i < redHits; i++) {
+                if (!spaceshipsRed.isEmpty()) {
+                    spaceshipsRed.remove(0);
+                }
+            }
+
+            for (int i = 0; i < blueHits; i++) {
+                if (!spaceshipsBlue.isEmpty()) {
+                    spaceshipsBlue.remove(0);
+                }
+            }
+            //checks whether the space is over or not.
+            if (spaceshipsRed.isEmpty() || spaceshipsBlue.isEmpty()) {
+                onGoingSpaceBattle = false;
+            }
+
+        }
+        //if both players have their ships destroyed, the method returns null.
+        if (spaceshipsRed.isEmpty() && spaceshipsBlue.isEmpty()) {
+            System.out.println("War. War never changes. Both players has lost all their spaceships.");
+            return null;
+        }
+        //returns who won via the conditional operator.
+        return spaceshipsRed.isEmpty() ? bluePlayer : redPlayer;
+    }
+
+    private int getNumberFrom1to10() {
+        Random rand = new Random();
+        return rand.nextInt(10) + 1;
+    }
 
 }

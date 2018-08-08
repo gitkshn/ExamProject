@@ -1,3 +1,5 @@
+import Exceptions.InvalidSpaceBattleException;
+import Units.*;
 import Units.Units;
 
 import java.util.ArrayList;
@@ -35,4 +37,11 @@ public class SupernovaSystem implements Systems {
     public String getPosition() {
         return position;
     }
+
+    @Override
+    public Player spaceBattle(Player redPlayer, Player bluePlayer) throws InvalidSpaceBattleException {
+        throw new InvalidSpaceBattleException("supernova");
+    }
+
+
 }

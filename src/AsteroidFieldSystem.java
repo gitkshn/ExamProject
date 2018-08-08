@@ -1,4 +1,6 @@
+import Exceptions.InvalidSpaceBattleException;
 import Units.Units;
+import Units.*;
 
 import java.util.ArrayList;
 
@@ -8,7 +10,7 @@ public class AsteroidFieldSystem implements Systems {
     private String position;
     private ArrayList<Units> spaceshipsInsideSupernova = new ArrayList<Units>();
 
-    public AsteroidFieldSystem(String position) {
+    AsteroidFieldSystem(String position) {
         this.position = position;
     }
 
@@ -39,7 +41,12 @@ public class AsteroidFieldSystem implements Systems {
         return position;
     }
 
-    public void flySpaceshipAwayFromSystem(Units dreadnought) {
+    @Override
+    public Player spaceBattle(Player redPlayer, Player bluePlayer) throws InvalidSpaceBattleException {
+        throw new  InvalidSpaceBattleException("asteroidField");
+    }
+
+    void flySpaceshipAwayFromSystem(Units dreadnought) {
         spaceshipsInsideSupernova.remove(dreadnought);
     }
 }

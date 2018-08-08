@@ -9,11 +9,6 @@ import java.util.Random;
 /* Kasper Suamchiang Hvitfeldt Nielsen.
 kshn16@student.aau.dk */
 class RandomGalaxy {
-    //static method which returns an random int according to the seed.
-    private static int getRandomInt(int seedNumber) {
-        Random rand = new Random();
-        return rand.nextInt(seedNumber);
-    }
     //the method which returns a random galaxy.
     Galaxy getGalaxy() {
         PlanetArray planetArray = new PlanetArray();
@@ -110,6 +105,11 @@ class RandomGalaxy {
             planetArrayList.add(planetArray.getRandomPlanet());
         }
         return planetArrayList;
+    }
+    //method which returns an random int according to the seed.
+    private int getRandomInt(int seedNumber) {
+        Random rand = new Random();
+        return rand.nextInt(seedNumber);
     }
 
 }
