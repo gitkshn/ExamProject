@@ -1,8 +1,7 @@
 import Exceptions.*;
 import Resources.PlanetNames;
 import Resources.Races;
-import Units.Carrier;
-import Units.Player;
+import Units.*;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -35,8 +34,10 @@ class GalaxyTest {
             PlanetSystem planetSystem1 = new PlanetSystem("North",planetArrayList1);
             PlanetSystem planetSystem2 = new PlanetSystem("South-West",planetArrayList2);
 
-            Carrier carrier = new Carrier(new Player("Jon", Races.BROTHERHOOD_OF_YIN.name(), "White"));
-            planetSystem1.flySpaceshipToSystem(carrier);
+            Player player = new Player("Jon", Races.BROTHERHOOD_OF_YIN.name(), "White");
+            Dreadnought dreadnought = new Dreadnought(player);
+            Carrier carrier = new Carrier(player);
+            planetSystem1.flySpaceshipToSystem(carrier, dreadnought);
 
             ArrayList<Systems> GalaxyList = new ArrayList<>();
             GalaxyList.add(planetSystem1);
@@ -56,6 +57,8 @@ class GalaxyTest {
             doesNotContainDuplicatePlanets(galaxy);
             //cannot test for thrown exception as planetSystem constructor does not allow > 3 planets.
             doesNotHaveMoreThan3PlanetsInASystem(galaxy);
+            //should find 1 spaceship, the carrier.
+            returnAllShipsOwnedByPlayer(galaxy, player);
 
         } catch (Exception e) {
             System.out.println(e.getMessage());
@@ -146,7 +149,7 @@ class GalaxyTest {
     }
 
     @Test
-    //the predefinedGalaxy is legal, so the isLegal should return true.
+    //the predefinedGalaxy is legal, so the isLegal method should return true.
     void isLegal() {
         PredefinedGalaxy predefinedGalaxy = new PredefinedGalaxy();
         try {
@@ -154,5 +157,21 @@ class GalaxyTest {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    //finds the spaceship owned by the player. The sorted list is checked manually for errors via a print statement.
+    private void returnAllShipsOwnedByPlayer(Galaxy galaxy, Player player) {
+        ArrayList<Units> spaceshipsOwnedByPlayer = galaxy.returnAllShipsOwnedByPlayer(player);
+        assertEquals(2, spaceshipsOwnedByPlayer.size());
+        for (Units spaceship : spaceshipsOwnedByPlayer) {
+            System.out.println(spaceship.getClass().getSimpleName());
+        }
+
+    }
+    @Test
+    void createTextFileContainingPlayersWithPlanetaryControl() {
+        PredefinedGalaxy predefinedGalaxy = new PredefinedGalaxy();
+        predefinedGalaxy.getGalaxy().createTextFileContainingPlayersWithPlanetaryControl();
+
     }
 }

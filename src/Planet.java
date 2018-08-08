@@ -8,6 +8,7 @@ public class Planet {
     private String name;
     private int resourceProduction;
 
+
     //constructor.
     public Planet(String name, int resourceProduction) throws InvalidResourceProductionException {
         this.name = name;

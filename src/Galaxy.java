@@ -1,15 +1,16 @@
 import Exceptions.*;
 import Resources.PlanetNames;
-import Units.Units;
+import Units.*;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
+import java.io.BufferedWriter;
+import java.io.FileOutputStream;
+import java.io.OutputStreamWriter;
+import java.nio.charset.StandardCharsets;
+import java.util.*;
 
 /* Kasper Suamchiang Hvitfeldt Nielsen.
 kshn16@student.aau.dk */
-class Galaxy {
+public class Galaxy {
     ArrayList<Systems> SystemsList;
 
     Galaxy(ArrayList<Systems> SystemsList) {
@@ -51,6 +52,7 @@ class Galaxy {
         return hasMecatolRexInCenterSystem() && doesNotContainDuplicatePlanets()
                 && doesNotHaveMoreThan3PlanetsInASystem() && isAllOppositeSystemPositionsCorrect();
     }
+
 
     boolean hasMecatolRexInCenterSystem() throws DoesNotContainMecatolRexException, CenterSystemContainsMultiplePlanetsException, GalaxyContainsMultipleMecatolRexException {
         //checks if the center system has the correct position and contains the planet called mecatol rex. if not, an exception is thrown.
@@ -109,6 +111,7 @@ class Galaxy {
     //checks whether a galaxy with 7 systems is aligned correctly.
     boolean isAllOppositeSystemPositionsCorrect() throws Exception {
         //map defines a key-value pair that is used to determine if the opposite direction is correct via integers.
+
         Map<String, Integer> map = new HashMap();
         map.put("North", 0);
         map.put("North-East", 1);
@@ -139,6 +142,75 @@ class Galaxy {
         if (validOppositeSystems != numberOfPlanetSystems) {
             throw new SystemsAreNotPositionedOppositeException();
         }
+
         return true;
+    }
+    //returns an arrayList with all the spaceships the player owns in a sorted list.
+    ArrayList<Units> returnAllShipsOwnedByPlayer(Player player) {
+        ArrayList<Units> spaceshipsOwnedByPlayer = new ArrayList<Units>();
+        //gathers all the spaceships owned by the player.
+        for (Systems systems : SystemsList) {
+            for (Units spaceship : systems.getSpaceshipsInsideSystem()) {
+                if (spaceship.getOwner().equals(player)) {
+                    spaceshipsOwnedByPlayer.add(spaceship);
+                }
+            }
+        }
+        //if the list is empty, a print statement is made.
+        if (spaceshipsOwnedByPlayer.isEmpty()) {
+            System.out.println(player.getName() + " has no spaceships in the galaxy.");
+        }
+        //compares the units according to their combat value first and then resource cost if their combat values are equal.
+        spaceshipsOwnedByPlayer.sort(Comparator.comparingInt(Units::getCombatValue).thenComparingInt(Units::getResourceCost));
+
+        return spaceshipsOwnedByPlayer;
+    }
+    void createTextFileContainingPlayersWithPlanetaryControl() {
+    /*bufferedWriter in try-with-resources to close it after use.
+    the filepath for PlayersWithPlanetaryControl is in the same folder as the project.*/
+        try (BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("PlayersWithPlanetaryControl.txt"), StandardCharsets.UTF_8))) {
+            for (Systems system : SystemsList) {
+                //flag that is used to keep bufferWriter from writing the system and owner multiple times.
+                int newSystemFlag = 0;
+
+                for (Units spaceship : system.getSpaceshipsInsideSystem()) {
+                    int totalNumberOfShips = system.getSpaceshipsInsideSystem().size();
+                    int shipsOwned = 0;
+                    //if there is planets in the system the for loop checks whether the owner of the first spaceship owns all the spaceships in the planet system.
+                    if (!system.getPlanetList().isEmpty()) {
+                        for (int numberOfShips = 0; numberOfShips < totalNumberOfShips; numberOfShips++) {
+                            if (system.getSpaceshipsInsideSystem().get(0).getOwner().equals(system.getSpaceshipsInsideSystem().get(numberOfShips).getOwner())) {
+                                shipsOwned++;
+                            }
+                        }
+                    }
+                    /*should be equal otherwise there is different owners which means no-one has control of the system
+                     *if it is a new system (indicated by the flag) bufferedWriter writes the planet system name,
+                     *and the owner which has control over the following planets.*/
+                    if (shipsOwned == totalNumberOfShips) {
+                        newSystemFlag++;
+                        if (newSystemFlag == 1) {
+                            bufferedWriter.write("Planet System: " + system.getPosition());
+                            bufferedWriter.newLine();
+                            bufferedWriter.write(spaceship.getOwner().toString());
+                            bufferedWriter.newLine();
+                            for (Planet planet : system.getPlanetList()) {
+                                bufferedWriter.write("     " + planet.getName());
+                                bufferedWriter.newLine();
+
+                            }
+                        }
+                    }
+                }
+            }
+        //bufferedWriter, OutputStreamWriter and FileOutputStream can throw an IOException.
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            e.printStackTrace();
+        }
+    }
+    Galaxy getRandomGalaxy() {
+        
+        return null;
     }
 }

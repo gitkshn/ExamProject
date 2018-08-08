@@ -1,0 +1,7 @@
+Planet System: Center
+Player - name: Crassus, race: EMIRATES_OF_HACAN, color: Blue
+     MECATOL_REX
+Planet System: North
+Player - name: Pompey, race: FEDERATION_OF_SOL, color: Red
+     VEGA_MINOR
+     VEGA_MAJOR
