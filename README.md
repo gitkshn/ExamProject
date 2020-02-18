@@ -4,5 +4,4 @@ Some of these subproblems were making planets, ships, spacebattles between playe
 In addition, the program should be well-tested.
 
 # Result
-Oral examination: grade A.
-\newline Line coverage: 95%
+Oral examination: grade A. Test code line coverage: 95%.
